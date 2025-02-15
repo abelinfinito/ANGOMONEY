@@ -131,6 +131,8 @@ function ViewHome(user) {
             background: linear-gradient(135deg, #4A00E0, #8E2DE2);
             color: white;
             border-radius: 15px;
+          
+           margin-right: 10px; /* Espaçamento lateral, útil se for um carrossel */
             padding: 8px;
             text-align: left;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
