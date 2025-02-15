@@ -1,0 +1,43 @@
+[{
+    "users": [
+        {
+            "id":0,
+            "dia":"0",
+            "fin":"24",
+            "nome":"DEMO",
+            "iban":"DEMO",
+            "senha":"123456",
+            "telefone":"123456",
+            "pv":"DEMO",
+            "ganhodiario":"00",
+            "ganhototal":"00",
+            "saldo":"1000",
+            "levantamento":"00",
+            "estado":"sem levantamento",
+            "valorInvestido":"00"
+             
+        },
+        {
+            "id":354,
+            "dia":"45",
+            "fin":"180",
+            "nome":"Daniel fernando",      
+            "iban":"xxxxxx",
+            "senha":"Daniel",
+            "telefone":"972871543",
+            "pv":"4",
+            "ganhodiario":"1700",
+            "ganhototal":"180.000",
+            "saldo":"67.000",
+            "levantamento":"78.000",
+            "estado":"PAGO",
+            "valorInvestido":"25.000"
+        }  
+        
+    
+
+
+    ]
+
+    }
+]

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Dados para WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000;
+            color: white;
+        }
+        .container {
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: red;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            background: #222;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .input-container input {
+            flex: 1;
+            background: none;
+            border: none;
+            color: white;
+            outline: none;
+            padding-left: 10px;
+        }
+        .icon {
+            color: white;
+        }
+        button {
+            background-color: rgb(0, 255, 64);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        .link {
+            color: red;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" class="logo" alt="Logo">
+        <h2>ANGOMONEY</h2>
+        <div class="input-container">
+            <span class="icon">📱</span>
+            <input type="tel" id="phone" placeholder="Número do WhatsApp">
+        </div>
+        <button onclick="sendWhatsAppMessage()">Receber Dados de Acesso</button>
+        <a href="index.html" class="link">VOLTAR</a>
+        <a href="https://chat.whatsapp.com/CMBCIWs4L5eK89lcELvBYu" class="link">Junte-se ao nosso grupo do Whatsapp</a>
+    </div>
+
+    <script>
+        function sendWhatsAppMessage() {
+            const phone = document.getElementById("phone").value.trim();
+            if (!phone) {
+                alert("Por favor, insira um número de WhatsApp válido.");
+                return;
+            }
+            
+            const accessData = [
+                { number: "123456", password: "angomoney12" },
+                { number: "654321", password: "moneysecure34" },
+                { number: "789012", password: "cryptoaccess56" },
+                { number: "210987", password: "securepass78" },
+                { number: "345678", password: "blockchain90" }
+            ];
+            
+            const randomData = accessData[Math.floor(Math.random() * accessData.length)];
+            const message = `Estes sao seus dados de acesso temporariamente Numero${randomData.number}   Senha${randomData.password}.`;
+            const encodedMessage = encodeURIComponent(message);
+            
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Bem-Sucedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+            width: 320px;
+        }
+        h2 {
+            color: green;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✅ Cadastro Realizado com Sucesso!</h2>
+        <p>O seu cadastro foi enviado com sucesso.</p>
+        <p>Aguarde <strong>10 minutos</strong> para que sua conta fique ativa.</p>
+        <button onclick="voltarParaInicio()">Voltar ao Início</button>
+    </div>
+
+    <script>
+        function voltarParaInicio() {
+            window.location.href = "index.html"; // Redireciona para a página de login/início
+        }
+    </script>
+</body>
+</html>
