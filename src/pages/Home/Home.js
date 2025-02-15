@@ -154,6 +154,7 @@ function ViewHome(user) {
         <div class="carousel">
             <div class="cartao">
                 <h5>DADOS DO USUÁRIO</h5>
+                <br>
                 <div class="cartao-detalhes">
                     <span class="titulo">Telefone:</span>
                     <span class="valor">(+244) ${userData.telefone}</span>
@@ -167,7 +168,10 @@ function ViewHome(user) {
             
             
             <div class="cartao">
+            
                 <h5>DADOS DO PV</h5>
+                
+                <br>
                 <div class="cartao-detalhes">
                     <span class="titulo">PV:</span>
                     <span class="valor">${userData.pv}</span>
@@ -200,7 +204,7 @@ function ViewHome(user) {
                 <h5>DADOS CANCARIOS</h5>
                 <BR>
                 <div class="cartao-detalhes">
-                    <span class="titulo">Dados bancarios:</span>
+                    <span class="titulo">Nome:</span>
                     <span class="valor">${userData.nome} KZ</span>
                 </div>
                 <div class="cartao-detalhes">
@@ -222,50 +226,50 @@ function ViewHome(user) {
         </div>
         <div class="menu">
             
-            <div id="LevantamentoButton">
-                <i class="fa fa-download"></i>
+            <div id="LevantamentoButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 120px; text-align: center;">
+                <i class="fa fa-download"style="color: orange;"></i>
                 <span>Levantamento</span>
             </div>
 
-            <div id="depositoButton">
-                <i class="fa fa-bank"></i>
+            <div id="depositoButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="fa fa-bank"style="color: orange;"></i>
                 <span>Deposito</span>
             </div>
 
-            <div id="registroButton">
-                <i class="fa fa-gift"></i>
+            <div id="registroButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="fa fa-gift"style="color: orange;"></i>
                 <span>Historico de retirada</span>
             </div>
 
-            <div id="meuBancoButton">
-            <i class="fa fa-book"></i>
+            <div id="meuBancoButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+            <i class="fa fa-book"style="color: orange;"></i>
                 <span>Dados do PV</span>
             </div>
 
-            <div id="meuVipButon">
-                <i class="fa fa-mobile"></i>
+            <div id="meuVipButon"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="fa fa-mobile"style="color: orange;"></i>
                 <span>Subir de Vip</span>
             </div>
 
-            <div id="comissoesButton">
-                <i class="fa fa-users"></i>
+            <div id="comissoesButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="fa fa-users"style="color: orange;"></i>
                 <span>Convidar amigos</span>
             </div>
 
           
             
-            <div id="subirVipButton">
-                <i class="fa fa-lock"></i>
+            <div id="subirVipButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="fa fa-lock"style="color: orange;"></i>
                 <span>Sobre vip</span>
             </div>
 
-            <div id="pagamentosButton">
-                <i class="bi bi-cash-coin"></i>
+            <div id="pagamentosButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="bi bi-cash-coin"style="color: orange;"></i>
                 <span>Pagamentos</span>
             </div>
 
-            <div id="logOutButton">
-                <i class="fa fa-sign-out"></i>
+            <div id="logOutButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
+                <i class="fa fa-sign-out"style="color: orange;"></i>
                 <span>Sair</span>
             </div>
 
