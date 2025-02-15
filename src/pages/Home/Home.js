@@ -162,6 +162,7 @@ function ViewHome(user) {
                     <span class="valor">(+244) ${userData.telefone}</span>
                                
                 </div>
+                <br>
                 <div class="cartao-detalhes">
                     <span class="titulo">ID:</span>
                     <span class="valor">${userData.id}</span>
@@ -190,12 +191,13 @@ function ViewHome(user) {
                 
             </div>
             <div class="cartao">
-                <h5>ESTADO DE LEVANTAMENTO></h5>
+                <h5>ESTADO DE LEVANTAMENTO</h5>
                 <BR>
                 <div class="cartao-detalhes">
                     <span class="titulo">Valor do levantamento:</span>
                     <span class="valor">${userData.levantamento} KZ</span>
                 </div>
+                <br>
                 <div class="cartao-detalhes">
                     <span class="titulo">Estado:</span>
                     <span class="valor">${userData.estado} </span>
@@ -203,12 +205,13 @@ function ViewHome(user) {
             </div>
 
  <div class="cartao">
-                <h5>DADOS CANCARIOS</h5>
+                <h5>DADOS BANCARIOS</h5>
                 <BR>
                 <div class="cartao-detalhes">
                     <span class="titulo">Nome:</span>
-                    <span class="valor">${userData.nome} KZ</span>
+                    <span class="valor">${userData.nome}</span>
                 </div>
+                <br>
                 <div class="cartao-detalhes">
                     <span class="titulo">IBAN:</span>
                     <span class="valor">${userData.iban} </span>
