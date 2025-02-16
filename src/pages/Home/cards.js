@@ -91,9 +91,99 @@ export function registosCard(data) {
     let [user] = data;
     return(
 `    <div class="card" id="registosCard">
-        <h2>Historico de retirada</h2>
-        <p>Nenhum historico de momento</p>
+      
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 1px;
+            margin: 1px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        h3 {
+            color: #333;
+        }
+        p, ul {
+            color: #555;
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 15px;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            p, ul {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+        <h3>Como Funciona o Investimento na <i>AngoMoney</i></h3>
+        <p>A <i>AngoMoney</i> é uma plataforma de investimento inovadora que oferece aos angolanos oportunidades 
+        financeiras seguras e diversificadas. Recentemente, estabelecemos uma parceria estratégica com a 
+        <a href="https://angopay.onrender.com" target="_blank">https://angopay.onrender.com</a>, 
+        uma plataforma de pagamentos online que visa atender às necessidades financeiras de usuários em países africanos 
+        onde o acesso a serviços como PayPal e Wise é restrito.</p>
         
+        <p>Com essa colaboração, os usuários da <i>AngoMoney</i> podem investir diretamente na 
+        <a href="https://angopay.onrender.com" target="_blank">https://angopay.onrender.com</a>, 
+        contribuindo para o crescimento e expansão dos serviços financeiros digitais na região. Essa sinergia fortalece 
+        o ecossistema financeiro local e oferece aos investidores retornos atrativos, alinhados ao crescimento do mercado 
+        de pagamentos digitais em Angola.</p>
+        
+        <p>Além disso, a <i>AngoMoney</i> disponibiliza uma variedade de produtos de investimento, incluindo a venda de dólares 
+        americanos (USD), facilitando transações internacionais. Os investidores da <i>AngoMoney</i> podem comprar dólares diretamente na 
+        <a href="https://angopay.onrender.com" target="_blank">https://angopay.onrender.com</a>, permitindo a diversificação de 
+        seus portfólios com moeda forte e a proteção contra a volatilidade cambial.</p>
+        
+        <h3>Em que Estou a Investir?</h3>
+        <p>Ao investir na <i>AngoMoney</i>, você está contribuindo para o crescimento e expansão da 
+        <a href="https://angopay.onrender.com" target="_blank">https://angopay.onrender.com</a>, fortalecendo o ecossistema financeiro digital 
+        em Angola e promovendo a inclusão financeira na região.</p>
+        
+        <h3>Que Negócios São Estes?</h3>
+        <p>A <i>AngoPay</i> é especializada em fornecer soluções de pagamento seguras e eficientes, facilitando transações online e 
+        ampliando o acesso a serviços financeiros internacionais para os angolanos.</p>
+        
+        <p>Ao escolher a <i>AngoMoney</i>, você não apenas diversifica suas opções de investimento, mas também participa ativamente da 
+        modernização dos serviços financeiros em Angola.</p>
+    
+</body>
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+    
         <ol>
             
         <button class="close-button" id="closeregistosCard">Fechar</button>

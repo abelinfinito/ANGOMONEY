@@ -254,9 +254,9 @@ function ViewHome(user) {
                 <span>Deposito</span>
             </div>
 
-            <div id="registroButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
-                <i class="fa fa-gift"style="color: orange;"></i>
-                <span>Historico de retirada</span>
+            <div id="registroButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 7px; border-radius: 10px; width: 100px; text-align: center;">
+               <i class="fa fa-info-circle"style="color: orange;"></i>
+                <span>Sobre angomoney </span>
             </div>
 
             <div id="meuBancoButton"style="border: 0.1px solid rgba(0, 255, 13, 0.5); padding: 5px; border-radius: 10px; width: 100px; text-align: center;">
