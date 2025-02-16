@@ -192,7 +192,14 @@ function ViewHome(user) {
                     <span class="titulo">Ganho total:</span>
                     <span class="valor">${userData.ganhototal} kz</span>
                 </div>
-              
+                <div class="cartao-detalhes">
+                    <span class="titulo">Dia contando:</span>
+                    <span class="valor">${userData.dia} kz</span>
+                </div>
+                  <div class="cartao-detalhes">
+                    <span class="titulo">Dia de expiração:</span>
+                    <span class="valor">${userData.fin} kz</span>
+                </div>
                 
             </div>
             <div class="cartao">
