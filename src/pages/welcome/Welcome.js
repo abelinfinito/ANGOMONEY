@@ -54,9 +54,8 @@ function wellCamePAge(params) {
                 </div>
                 <a href="whatsapp.html" class="custom-link">receber dados de login no whatsapp</a>
                 <br>
-                <span>Juntar-se ao grupo dos investidores  </span><br>
-               <span><a href="https://chat.whatsapp.com/CMBCIWs4L5eK89lcELvBYu"target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a> </span><br>
-               
+               <a href="https://chat.whatsapp.com/CMBCIWs4L5eK89lcELvBYu">Entrar no grupo</a>
+
                
                
                     <br>
