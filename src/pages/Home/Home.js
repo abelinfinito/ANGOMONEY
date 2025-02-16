@@ -167,6 +167,11 @@ function ViewHome(user) {
                     <span class="titulo">ID:</span>
                     <span class="valor">${userData.id}</span>
                 </div>
+              <br>
+              <div class="cartao-detalhes">
+                    <span class="titulo">SALDO:</span>
+                    <span class="valor">${userData.saldo} kz</span>
+                </div>
             </div>
             
             

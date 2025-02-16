@@ -6,7 +6,7 @@ export function levantamentoCard() {
 `       <div style="background-color: aquamarine;height:700px ;" class="card" id="levantamentoCard">
 <form>
  <center>
- <h2>Levantamento Bancario</h2>
+ <h2>Levantamento</h2>
  
   <br><br>
    
@@ -51,7 +51,7 @@ export function levantamentoCard() {
   </style>
 </head>
 <body>
-  <a href="levantamento.html" class="botao-personalizado">Fazer Levantamento Express</a>
+  <a href="levantamento.html" class="botao-personalizado">Fazer Levantamento</a>
   <br><br><br>
 
 

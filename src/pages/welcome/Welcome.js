@@ -35,6 +35,7 @@ function wellCamePAge(params) {
 
                 <div class="buttonsLog">
                     <button id="logButton">Entrar</button>
+                    
                    
 
   <a href="cadastro.html" class="custom-link">
