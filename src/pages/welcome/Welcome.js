@@ -26,8 +26,12 @@ function wellCamePAge(params) {
        
             <i class="bi bi-cash-coin"></i>
  
-                <span></span><br>
-                <a href="https://wa.me/926240472">Suporte</a>
+             <br>
+             <span>
+  <a href="https://wa.me/244926240472" rel="noopener noreferrer">suporte</i>
+  </a>
+</span><br>
+   
 
                 <div class="buttonsLog">
                     <button id="logButton">Entrar</button>
@@ -57,7 +61,7 @@ function wellCamePAge(params) {
                
                     <br>
                     <br>
-                     <a href="angopay.apk" download>descaregar apk da angomoney</a>
+                       <a href="ANGOMONEY (1).apk" download>descaregar apk da angomoney</a>
 
             </div>
         

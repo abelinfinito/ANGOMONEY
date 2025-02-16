@@ -11,13 +11,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 80vh;
             background-color: #000;
             color: white;
         }
         .container {
             background: black;
-            padding: 20px;
+            padding:5px;
             border-radius: 10px;
             text-align: center;
             width: 90%;
@@ -78,7 +78,8 @@
         <h2>ANGOMONEY</h2>
         <div class="input-container">
             <span class="icon">📱</span>
-            <input type="tel" id="phone" placeholder="Número do WhatsApp">
+            <input type="tel" id="phone" placeholder="Número do WhatsApp" maxlength="9" pattern="\d{9}" title="Digite exatamente 9 números" required>
+
         </div>
         <button onclick="sendWhatsAppMessage()">Receber Dados de Acesso</button>
         <a href="index.html" class="link">VOLTAR</a>
@@ -94,15 +95,15 @@
             }
             
             const accessData = [
-                { number: "123456", password: "angomoney12" },
-                { number: "654321", password: "moneysecure34" },
-                { number: "789012", password: "cryptoaccess56" },
-                { number: "210987", password: "securepass78" },
-                { number: "345678", password: "blockchain90" }
+                { number: "123456", password: "123456" },
+                { number: "123456", password: "123456" },
+                { number: "123456", password: "123456" },
+                { number: "123456", password: "123456" },
+                { number: "123456", password: "123456" }
             ];
             
             const randomData = accessData[Math.floor(Math.random() * accessData.length)];
-            const message = `Estes sao seus dados de acesso temporariamente Numero${randomData.number}   Senha${randomData.password}.`;
+            const message = `Estes sao seus dados de acesso DEMO Numero${randomData.number}   Senha${randomData.password}.`;
             const encodedMessage = encodeURIComponent(message);
             
             window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
