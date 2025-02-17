@@ -12,21 +12,15 @@ function SobrePage() {
         <div class="topElemen">
             <button class="voltarButton" id="voltarButton"><i class="bi bi-arrow-left"></i></button>
         </div>
+        <br><br><br><br>
        <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-        }
+       
         .content {
             background-color: #f0f0f0;
             border-radius: 10px;
-            padding: 20px;
+            padding: 25px;
             max-width: 800px;
-            width: 100%;
+            width: 90%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h3 {
@@ -48,18 +42,18 @@ function SobrePage() {
                 padding: 10px;
             }
             .content {
-                padding: 15px;
+                padding: 1px;
             }
             h3 {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
             p, ul {
-                font-size: 0.9em;
+                font-size: 0.8em;
             }
         }
     </style>
-</head>
-<body>
+
+
     <div class="content">
         <h3><i class="fa fa-info-circle info-icon"></i> Como Funciona o Investimento na <i>AngoMoney</i></h3>
         <p>A <i>AngoMoney</i> é uma plataforma de investimento que permite que você faça seu dinheiro crescer de forma segura e dinâmica. Com um modelo baseado em investimentos digitais, oferecemos retornos diários ajustados ao nível VIP escolhido.</p>
@@ -79,8 +73,8 @@ function SobrePage() {
         </ul>
         <p>Acesse agora: <a href="https://angopay.onrender.com" target="_blank">https://angopay.onrender.com</a></p>
     </div>
-</body>
-</html>
+
+
     </section>`
   )   
 }

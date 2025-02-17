@@ -194,11 +194,11 @@ function ViewHome(user) {
                 </div>
                 <div class="cartao-detalhes">
                     <span class="titulo">Dia contando:</span>
-                    <span class="valor">${userData.dia} kz</span>
+                    <span class="valor">${userData.dia} Dia</span>
                 </div>
                   <div class="cartao-detalhes">
                     <span class="titulo">Dia de expiração:</span>
-                    <span class="valor">${userData.fin} kz</span>
+                    <span class="valor">${userData.fin} Dia</span>
                 </div>
                 
             </div>
