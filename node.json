@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "username": "424242",
+            "password": "424242",
+            "accessCode": "424242"
+        },
+        {
+            "username": "987654321",
+            "password": "senha321",
+            "accessCode": "codigo321"
+        }
+    ]
+}

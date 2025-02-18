@@ -212,21 +212,183 @@ export function meuBancoCard(usuario = {}) {
 export function meuVIPCard() {
     return (
         `<div class="card" id="meuVIPCard">
-            <h2>Escolha o VIP que deseja subir </h2>
-             <h2> Quanto maior o vip maior será o seu ganho diario </h2>
-            <ul class="litVip">
-                <li class="titleList"><strong>CLIENTE VIP</strong></li>
-               
-                <li>CLIENTE VIP1 - 5.000 kwanzas/ -ganho diário 250 kwanzas prazo/ 60 DIAS GANHO TOTAL-15.000 KWANZAS</li>
-                <li>CLIENTE VIP2 - 12.000 kwanzas/ -ganho diário 500 kwanzas prazo / 60 DIAS GANHO TOTAL-30.000 KWANZAS</li>
-                <li>CLIENTE VIP3 - 25.000 kwanzas/ -ganho diário 1000 kwanzas prazo / 60 DIAS GANHO TOTAL-60.000 KWANZAS</li>
-                <li>CLIENTE VIP4 - 85.000 kwanzas/ -ganho diário 3500 kwanzas prazo / 60 DIAS GANHO TOTAL-210.000 KWANZAS</li>
-                 <li>CLIENTE VIP3 - 150.000 kwanzas/ -ganho diário 7000 kwanzas prazo / 60 DIAS GANHO TOTAL-420.000 KWANZAS</li>
-                <li>CLIENTE VIP4 - 320.000 kwanzas/ -ganho diário 14.000 kwanzas prazo / 60 DIAS GANHO TOTAL-840.000 KWANZAS</li>
-                <li>
-                    <a href="https://wa.me/244926240472?text=Ola+senhor+Wiliam+gostaria+de+fazer+um+investimeno+e+este+é+o+meu+comprovativo+obrigado🎉🎉🎉🎉🎉"><button class="depositeButton" id="">Fazer o Deposito</button></a>
-                </li>
-            </ul>
+          
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .vip-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .vip-item {
+            background-color: #fff;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .vip-item:hover {
+            transform: scale(1.05);
+        }
+
+        .vip-item h3 {
+            margin: 0;
+            color: #FF5722;
+            font-size: 24px;
+        }
+
+        .vip-item p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .vip-item .depositeButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .vip-item .depositeButton:hover {
+            background-color: #45a049;
+        }
+
+        .vip-item .vip-price {
+            color: #3F51B5;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .vip-item {
+                width: 90%;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .vip-item h3 {
+                font-size: 20px;
+            }
+
+            .vip-item p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Escolha o VIP que deseja investir</h1>
+    <p>Escolha o seu VIP e veja o quanto pode ganhar investindo em dólares. O lucro total será 4 vezes o valor investido, com ganho diário dividido em 60 dias.</p>
+
+    <ul class="vip-list">
+        <!-- VIP 1 -->
+        <li class="vip-item">
+            <h3>CLIENTE VIP1</h3>
+            <p class="vip-price">Investimento: 5 USD (5 x 1150 Kz = 5750 Kz)</p>
+            <p>Ganho diário: 250 Kz</p>
+            <p>Prazo: 60 dias</p>
+            <p>Ganho Total: 15.000 Kz</p>
+            <a href="https://wa.me/244926240472?text=Ola+senhor+Wiliam+gostaria+de+fazer+um+investimeno+e+este+é+o+meu+comprovativo+obrigado🎉🎉🎉🎉🎉">
+                <button class="depositeButton">Fazer o Depósito</button>
+            </a>
+        </li>
+
+        <!-- VIP 2 -->
+        <li class="vip-item">
+            <h3>CLIENTE VIP2</h3>
+            <p class="vip-price">Investimento: 15 USD (15 x 1150 Kz = 17.250 Kz)</p>
+            <p>Ganho diário: 500 Kz</p>
+            <p>Prazo: 60 dias</p>
+            <p>Ganho Total: 30.000 Kz</p>
+            <a href="https://wa.me/244926240472?text=Ola+senhor+Wiliam+gostaria+de+fazer+um+investimeno+e+este+é+o+meu+comprovativo+obrigado🎉🎉🎉🎉🎉">
+                <button class="depositeButton">Fazer o Depósito</button>
+            </a>
+        </li>
+
+        <!-- VIP 3 -->
+        <li class="vip-item">
+            <h3>CLIENTE VIP3</h3>
+            <p class="vip-price">Investimento: 29 USD (29 x 1150 Kz = 33.350 Kz)</p>
+            <p>Ganho diário: 1000 Kz</p>
+            <p>Prazo: 60 dias</p>
+            <p>Ganho Total: 60.000 Kz</p>
+            <a href="https://wa.me/244926240472?text=Ola+senhor+Wiliam+gostaria+de+fazer+um+investimeno+e+este+é+o+meu+comprovativo+obrigado🎉🎉🎉🎉🎉">
+                <button class="depositeButton">Fazer o Depósito</button>
+            </a>
+        </li>
+
+        <!-- VIP 4 -->
+        <li class="vip-item">
+            <h3>CLIENTE VIP4</h3>
+            <p class="vip-price">Investimento: 40 USD (40 x 1150 Kz = 46.000 Kz)</p>
+            <p>Ganho diário: 3.500 Kz</p>
+            <p>Prazo: 60 dias</p>
+            <p>Ganho Total: 210.000 Kz</p>
+            <a href="https://wa.me/244926240472?text=Ola+senhor+Wiliam+gostaria+de+fazer+um+investimeno+e+este+é+o+meu+comprovativo+obrigado🎉🎉🎉🎉🎉">
+                <button class="depositeButton">Fazer o Depósito</button>
+            </a>
+        </li>
+
+        <!-- VIP 5 -->
+        <li class="vip-item">
+            <h3>CLIENTE VIP5</h3>
+            <p class="vip-price">Investimento: 85 USD (85 x 1150 Kz = 97.750 Kz)</p>
+            <p>Ganho diário: 7.000 Kz</p>
+            <p>Prazo: 60 dias</p>
+            <p>Ganho Total: 420.000 Kz</p>
+            <a href="https://wa.me/244926240472?text=Ola+senhor+Wiliam+gostaria+de+fazer+um+investimeno+e+este+é+o+meu+comprovativo+obrigado🎉🎉🎉🎉🎉">
+                <button class="depositeButton">Fazer o Depósito</button>
+            </a>
+        </li>
+    </ul>
+
+</body>
+
+
+
+
+
+
+
+
             <div class="divButtons">
                 <button class="close-button" id="closemeuVIPCard">Fechar</button>
             </div>
