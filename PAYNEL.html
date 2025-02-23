@@ -11,7 +11,6 @@
     <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg">
         <h2 class="text-2xl font-bold text-center mb-4 sm:mb-6">Painel Administrativo</h2>
 
-        <!-- Exibição do Total de Usuários e Dinheiro -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-center">
             <div class="p-4 bg-gray-50 rounded-lg shadow">
                 <h3 class="text-lg font-semibold">Usuários Cadastrados</h3>
@@ -23,32 +22,25 @@
             </div>
         </div>
 
-        <!-- Buscar Usuário -->
         <div class="mb-6">
             <h3 class="text-lg font-semibold mb-2">Buscar Usuário</h3>
             <input type="number" id="userId" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500" placeholder="Digite o ID do usuário">
             <button onclick="buscarUsuario()" class="mt-3 w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition">Buscar</button>
         </div>
 
-        <!-- Buscar PV -->
         <div class="mb-6">
             <h3 class="text-lg font-semibold mb-2">Buscar Usuários por PV</h3>
-            <input type="number" id="pvLevel" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500" placeholder="Digite o nível de PV (0, 1, 2, 3)">
+            <input type="number" id="pvLevel" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500" placeholder="Digite o nível de PV">
             <button onclick="buscarPvUsuarios()" class="mt-3 w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition">Buscar PV</button>
             <p id="pvCount" class="text-gray-600 mt-2">Carregando...</p>
         </div>
 
-        <!-- Exibição dos Dados do Usuário -->
         <div id="userData" class="mt-4 p-4 sm:p-6 bg-gray-50 rounded-lg shadow">
             <p class="text-gray-600">Digite um ID para buscar as informações do usuário.</p>
         </div>
     </div>
 
     <script>
-        function formatarNumero(num) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
         async function buscarUsuario() {
             const userId = document.getElementById("userId").value;
             if (userId === "") {
@@ -60,24 +52,24 @@
                 const response = await fetch("src/server/server.json");
                 const data = await response.json();
                 const users = data[0].users;
-
                 const user = users.find(u => u.id == userId);
 
                 if (user) {
+                    const senhaMascarada = "x".repeat(user.senha.length);
                     document.getElementById("userData").innerHTML = `
                         <p><strong>ID:</strong> ${user.id}</p>
                         <p><strong>Nome:</strong> ${user.nome}</p>
                         <p><strong>PV:</strong> ${user.pv}</p>
-                        <p><strong>IBAN:</strong> ${user.iban}</p>
+                          <p><strong>Ganho Diario:</strong> ${parseFloat(user.ganhodiario.replace(/\./g, "")).toLocaleString('pt-PT', { minimumFractionDigits: 2 })} Kz</p>
+                          <p><strong>Ganho Total:</strong> ${parseFloat(user.ganhototal.replace(/\./g, "")).toLocaleString('pt-PT', { minimumFractionDigits: 2 })} Kz</p>
+                          <p><strong>IBAN:</strong> ${user.iban}</p>
                         <p><strong>Dia:</strong> ${user.dia}</p>
                         <p><strong>Expira em:</strong> ${user.fin}</p>
                         <p><strong>Telefone:</strong> ${user.telefone}</p>
-                        <p><strong>Senha:</strong> ${user.senha}</p>
-                        <p><strong>Saldo:</strong> ${formatarNumero(parseFloat(user.saldo))} Kz</p>
-                        <p><strong>Ganho Diário:</strong> ${formatarNumero(parseFloat(user.ganhodiario))} Kz</p>
-                        <p><strong>Ganho Total:</strong> ${formatarNumero(parseFloat(user.ganhototal))} Kz</p>
-                        <p><strong>Levantamento:</strong> ${formatarNumero(parseFloat(user.levantamento))} Kz</p>
-                        <p><strong>Investido:</strong> ${formatarNumero(parseFloat(user.valorInvestido))} Kz</p>
+                        <p><strong>Saldo:</strong> ${parseFloat(user.saldo.replace(/\./g, "")).toLocaleString('pt-PT', { minimumFractionDigits: 2 })} Kz</p>
+                          <p><strong>Valor investido:</strong> ${parseFloat(user.valorInvestido.replace(/\./g, "")).toLocaleString('pt-PT', { minimumFractionDigits: 2 })} Kz</p>
+                        <p><strong>Senha:</strong> <span id="senha">${senhaMascarada}</span> <button onclick="toggleSenha('${user.senha}')" class="text-blue-500">Ver</button></p>
+                          <p><strong>Levantamento:</strong> ${parseFloat(user.levantamento.replace(/\./g, "")).toLocaleString('pt-PT', { minimumFractionDigits: 2 })} Kz</p>
                         <p><strong>Estado:</strong> ${user.estado}</p>
                     `;
                 } else {
@@ -86,23 +78,6 @@
             } catch (error) {
                 console.error("Erro ao carregar os dados: ", error);
                 alert("Erro ao carregar os dados do servidor.");
-            }
-        }
-
-        async function carregarUsuarios() {
-            try {
-                const response = await fetch("src/server/server.json");
-                const data = await response.json();
-                const users = data[0].users;
-
-                document.getElementById("userCount").textContent = `Total: ${users.length}`;
-
-                const totalMoney = users.reduce((acc, user) => acc + parseFloat(user.saldo), 0);
-                document.getElementById("totalMoney").textContent = `Total: ${formatarNumero(totalMoney.toFixed(2))} Kz`;
-            } catch (error) {
-                console.error("Erro ao carregar os dados: ", error);
-                document.getElementById("userCount").textContent = "Erro ao carregar.";
-                document.getElementById("totalMoney").textContent = "Erro ao carregar.";
             }
         }
 
@@ -117,9 +92,7 @@
                 const response = await fetch("src/server/server.json");
                 const data = await response.json();
                 const users = data[0].users;
-
-                const usuariosComPV = users.filter(user => user.pv === pvLevel.toString());
-
+                const usuariosComPV = users.filter(user => parseInt(user.pv) === parseInt(pvLevel));
                 document.getElementById("pvCount").textContent = `Usuários no PV ${pvLevel}: ${usuariosComPV.length}`;
             } catch (error) {
                 console.error("Erro ao carregar os dados: ", error);
@@ -127,17 +100,18 @@
             }
         }
 
-        window.onload = carregarUsuarios;
-    </script>
-
-    <script>
-        if (window.location.hostname === "admin.angomoney.onrender.com") {
-            window.location.href = "/admin";
+        function toggleSenha(senha) {
+            const senhaSpan = document.getElementById("senha");
+            if (senhaSpan.textContent.includes("x")) {
+                senhaSpan.textContent = senha;
+            } else {
+                senhaSpan.textContent = "x".repeat(senha.length);
+            }
         }
     </script>
-
 </body>
 </html>
+
 
 
 

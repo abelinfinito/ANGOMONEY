@@ -53,9 +53,11 @@ function wellCamePAge() {
                     <button id="logButton" class="buttonStyled">Entrar</button>
                     <a href="cadastro.html" class="custom-link">Registrar-se</a>
                 </div>
-                <a href="whatsapp.html" class="custom-link">Receber dados de login no WhatsApp</a>
+                
                 <br>
                 <a href="https://chat.whatsapp.com/CMBCIWs4L5eK89lcELvBYu" class="custom-link">Entrar no grupo</a>
+                 <br>
+                <a href="suporte.html" class="custom-link">Cliente especial</a>
                 <br><br>
                 <a href="ANGOMONEY (1).apk" download class="custom-link">Descarregar APK da Angomoney</a>
             </div>
